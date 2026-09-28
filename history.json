@@ -1,0 +1,1099 @@
+{
+  "title": "The history of image recognition",
+  "tagline": "About 70 years from the first digital photo to machines that look and talk.",
+  "intro": "In 1957 a photo of a baby became the first grid of pixels in a computer. Researchers thought seeing would be easy to program, and learned over decades that it was one of the hardest problems in computing. Hand-made edge and corner finders gave way to networks that learn their own filters from millions of pictures, and now vision is joining language, bringing new uses and new questions about fairness and privacy.",
+  "eras": [
+    {
+      "id": "first",
+      "name": "Pixels and first ideas",
+      "from": 1957,
+      "to": 1979,
+      "color": "#c49bff",
+      "summary": "Photos become numbers, brain scientists find edge-detecting cells, and early programs try to understand simple blocks. Seeing turns out to be hard."
+    },
+    {
+      "id": "features",
+      "name": "Hand-made features",
+      "from": 1979,
+      "to": 2008,
+      "color": "#ffb547",
+      "summary": "People design edge, corner and feature detectors by hand, while the first convolutional networks quietly learn to read digits and cheques."
+    },
+    {
+      "id": "deep",
+      "name": "Deep learning learns to see",
+      "from": 2009,
+      "to": 2019,
+      "color": "#5ce1a9",
+      "summary": "Huge labelled datasets and graphics chips let deep networks learn their own features. Accuracy leaps, and so do concerns about bias."
+    },
+    {
+      "id": "language",
+      "name": "Vision meets language",
+      "from": 2020,
+      "to": 2026,
+      "color": "#ff7a59",
+      "summary": "Transformers and caption-trained models link pictures with words, while countries debate face recognition and privacy."
+    }
+  ],
+  "events": [
+    {
+      "year": 1957,
+      "date": "1957",
+      "era": "first",
+      "art": "pixels",
+      "key": true,
+      "title": "The first digital photo",
+      "who": "Russell Kirsch and colleagues",
+      "where": "National Bureau of Standards, Washington DC, United States",
+      "country": "United States",
+      "text": "Russell Kirsch's team built a drum scanner for SEAC, one of the first programmable computers in the US. The first picture they fed in was a photo of his three-month-old son, Walden, turned into a grid of 176 × 176 pixels.",
+      "why": "For the first time a photo became numbers inside a computer, the starting point of all image processing.",
+      "box": "pixels",
+      "sources": [
+        0,
+        1
+      ]
+    },
+    {
+      "year": 1959,
+      "date": "1959",
+      "era": "first",
+      "art": "brain",
+      "key": true,
+      "title": "Cells that answer to edges",
+      "who": "David Hubel and Torsten Wiesel",
+      "where": "Johns Hopkins University, Baltimore, United States",
+      "country": "United States",
+      "text": "Recording from single brain cells in the visual cortex of cats, Hubel and Wiesel found cells that fired only for a line or edge at a particular angle and place. Later work showed more complex cells that combine them.",
+      "why": "The idea of simple edge detectors feeding more complex ones inspired the layered design of convolutional networks, loosely.",
+      "box": "filters",
+      "sources": [
+        2,
+        3
+      ]
+    },
+    {
+      "year": 1963,
+      "date": "1963",
+      "era": "first",
+      "art": "wireframe",
+      "key": false,
+      "title": "The blocks world",
+      "who": "Lawrence Roberts",
+      "where": "MIT, Cambridge, United States",
+      "country": "United States",
+      "text": "In his PhD thesis, Lawrence Roberts wrote a program that found the edges of simple blocks in a photo and worked out their 3D shapes. It only worked for plain, clean polyhedra, not messy real scenes.",
+      "why": "Often called the first computer vision thesis, it set the goal of turning pixels into an understanding of 3D objects.",
+      "sources": [
+        4,
+        5
+      ]
+    },
+    {
+      "year": 1966,
+      "date": "7 July 1966",
+      "era": "first",
+      "art": "computer",
+      "key": true,
+      "title": "Vision as a summer project",
+      "who": "Seymour Papert and students",
+      "where": "MIT Artificial Intelligence Group, Cambridge, United States",
+      "country": "United States",
+      "text": "A memo from MIT planned a summer project for students to build a large part of a visual system, including telling objects from the background and naming them. It turned out to be far harder than anyone expected.",
+      "why": "It became a famous lesson: seeing feels effortless to people, but getting a computer to do it took decades.",
+      "box": "pixels",
+      "sources": [
+        6,
+        7
+      ]
+    },
+    {
+      "year": 1969,
+      "date": "1969",
+      "era": "first",
+      "art": "chip",
+      "key": false,
+      "title": "A chip that captures light",
+      "who": "Willard Boyle and George Smith",
+      "where": "Bell Labs, Murray Hill, United States",
+      "country": "United States",
+      "text": "Boyle and Smith invented the charge-coupled device (CCD), a chip that stores light as packets of electric charge and reads them out pixel by pixel. It became the eye of digital cameras and telescopes.",
+      "why": "Cheap image sensors made digital pictures, and so computer vision, part of everyday life. They shared the 2009 Nobel Prize in Physics.",
+      "sources": [
+        8,
+        9
+      ]
+    },
+    {
+      "year": 1980,
+      "date": "1979 (Japanese), 1980 (English)",
+      "era": "features",
+      "art": "neuralnet",
+      "key": true,
+      "title": "The Neocognitron",
+      "who": "Kunihiko Fukushima",
+      "where": "NHK Broadcasting Science Research Laboratories, Tokyo, Japan",
+      "country": "Japan",
+      "text": "Inspired by Hubel and Wiesel, Kunihiko Fukushima built a network of layers: simple cells that find small features and complex cells that pool them, so a shape could be recognised even when shifted.",
+      "why": "It is the direct ancestor of the convolutional network, with filters and pooling, the design this box trains.",
+      "box": "filters",
+      "sources": [
+        10,
+        11
+      ]
+    },
+    {
+      "year": 1981,
+      "date": "1981",
+      "era": "features",
+      "art": "trophy",
+      "key": false,
+      "title": "A Nobel Prize for how we see",
+      "who": "David Hubel and Torsten Wiesel",
+      "where": "Stockholm, Sweden",
+      "country": "Sweden",
+      "text": "Hubel and Wiesel shared the Nobel Prize in Physiology or Medicine for their discoveries about how the visual system processes information, with Roger Sperry, who was honoured for separate work on the brain's two halves.",
+      "why": "Their map of the visual cortex is still the textbook starting point, and EyeClear and BrainClear show the living version.",
+      "sources": [
+        12,
+        13
+      ]
+    },
+    {
+      "year": 1982,
+      "date": "1982",
+      "era": "features",
+      "art": "eye",
+      "key": false,
+      "title": "Marr's Vision",
+      "who": "David Marr",
+      "where": "MIT, Cambridge, United States",
+      "country": "United States",
+      "text": "David Marr's book, published after his early death in 1980, described vision as a series of steps: from edges to a sketch of surfaces to 3D objects. It shaped how researchers thought about vision for years.",
+      "why": "It gave computer vision a clear plan of stages, many of which learned networks later handled on their own.",
+      "sources": [
+        14,
+        15
+      ]
+    },
+    {
+      "year": 1986,
+      "date": "November 1986",
+      "era": "features",
+      "art": "focus",
+      "key": false,
+      "title": "The Canny edge detector",
+      "who": "John Canny",
+      "where": "MIT, Cambridge, United States",
+      "country": "United States",
+      "text": "John Canny worked out, with careful maths, what a good edge detector should do: find real edges, place them exactly, and mark each only once. His method is still built into image software today.",
+      "why": "Hand-designed edge finding was the first step in most vision systems for decades.",
+      "box": "filters",
+      "sources": [
+        16,
+        17
+      ]
+    },
+    {
+      "year": 1988,
+      "date": "1988",
+      "era": "features",
+      "art": "focus",
+      "key": false,
+      "title": "Finding corners",
+      "who": "Chris Harris and Mike Stephens",
+      "where": "Plessey Research, Roke Manor, United Kingdom",
+      "country": "United Kingdom",
+      "text": "Harris and Stephens described a corner detector that looks for places where the picture changes in two directions at once. Corners are easy to find again in another photo, so they help match and track things.",
+      "why": "Chapter 2's corner filter uses their formula.",
+      "box": "filters",
+      "sources": [
+        18,
+        19
+      ]
+    },
+    {
+      "year": 1989,
+      "date": "1989",
+      "era": "features",
+      "art": "digital",
+      "key": true,
+      "title": "A network reads zip codes",
+      "who": "Yann LeCun and colleagues",
+      "where": "AT&T Bell Labs, Holmdel, United States",
+      "country": "United States",
+      "text": "Yann LeCun's team trained a convolutional network with backpropagation to read handwritten digits on US mail. The same small filters were shared across the whole picture, so it needed far fewer weights.",
+      "why": "It showed that a network could learn its own filters from examples, instead of people designing them.",
+      "box": "train",
+      "sources": [
+        20,
+        21
+      ]
+    },
+    {
+      "year": 1994,
+      "date": "1994",
+      "era": "features",
+      "art": "digital",
+      "key": false,
+      "title": "The QR code",
+      "who": "Masahiro Hara and team at Denso Wave",
+      "where": "Denso Wave, Japan",
+      "country": "Japan",
+      "text": "Engineers at Denso Wave, a Toyota group company, designed the QR code to track car parts. Its three big corner squares can be found quickly from any angle, and built-in error correction fixes damaged parts.",
+      "why": "Decades later, QR codes carry UPI payments in India, and reading them still needs no neural network.",
+      "box": "uses",
+      "sources": [
+        22,
+        23
+      ]
+    },
+    {
+      "year": 1998,
+      "date": "November 1998",
+      "era": "features",
+      "art": "calculator",
+      "key": false,
+      "title": "LeNet-5 reads cheques",
+      "who": "Yann LeCun, Léon Bottou, Yoshua Bengio and Patrick Haffner",
+      "where": "AT&T Labs, United States",
+      "country": "United States",
+      "text": "A long paper described LeNet-5 and a system that read the amounts on handwritten bank cheques. NCR put such readers to work from the mid-1990s, and by around 2000 they were reported to read roughly 10% of cheques in the US.",
+      "why": "It was one of the first times image recognition did everyday work at large scale.",
+      "box": "train",
+      "sources": [
+        24,
+        20
+      ]
+    },
+    {
+      "year": 1999,
+      "date": "1999",
+      "era": "features",
+      "art": "focus",
+      "key": false,
+      "title": "SIFT: features that survive turning and zooming",
+      "who": "David Lowe",
+      "where": "University of British Columbia, Vancouver, Canada",
+      "country": "Canada",
+      "text": "David Lowe's SIFT method found distinctive points in a picture and described each so it could be matched in another photo, even after turning, zooming or a change of light.",
+      "why": "For a decade, hand-made features like SIFT powered panorama stitching, object recognition and robot navigation.",
+      "sources": [
+        25,
+        26
+      ]
+    },
+    {
+      "year": 2001,
+      "date": "2001",
+      "era": "features",
+      "art": "person",
+      "key": true,
+      "title": "Real-time face detection",
+      "who": "Paul Viola and Michael Jones",
+      "where": "Mitsubishi Electric Research Labs and Compaq, Cambridge, United States",
+      "country": "United States",
+      "text": "Viola and Jones found faces with thousands of simple light-and-dark box features, chosen by a learning method and checked in a fast cascade. It ran at 15 frames a second on a 700 MHz Pentium III.",
+      "why": "It put face-finding boxes in digital cameras, and its sliding-window idea is the one chapter 4 uses.",
+      "box": "detect",
+      "sources": [
+        27,
+        28
+      ]
+    },
+    {
+      "year": 2005,
+      "date": "2005",
+      "era": "features",
+      "art": "person",
+      "key": false,
+      "title": "Finding people by their edges",
+      "who": "Navneet Dalal and Bill Triggs",
+      "where": "INRIA, Grenoble, France",
+      "country": "France",
+      "text": "Dalal and Triggs described people by histograms of edge directions (HOG) in small cells, and slid a detector over the picture. It became a standard way to find pedestrians.",
+      "why": "It was among the best hand-made detectors just before learned features took over.",
+      "box": "detect",
+      "sources": [
+        29,
+        30
+      ]
+    },
+    {
+      "year": 2009,
+      "date": "June 2009",
+      "era": "deep",
+      "art": "pixels",
+      "key": true,
+      "title": "ImageNet",
+      "who": "Fei-Fei Li, Jia Deng and colleagues",
+      "where": "Princeton University, United States",
+      "country": "United States",
+      "text": "Fei-Fei Li's team presented ImageNet, millions of photos sorted into thousands of categories, labelled with help from online workers. From 2010 it ran a yearly contest with 1,000 categories.",
+      "why": "It gave learning systems enough varied examples to learn from, and a fair test to compare them.",
+      "box": "train",
+      "sources": [
+        31,
+        32
+      ]
+    },
+    {
+      "year": 2012,
+      "date": "September 2012",
+      "era": "deep",
+      "art": "chip",
+      "key": true,
+      "title": "AlexNet",
+      "who": "Alex Krizhevsky, Ilya Sutskever and Geoffrey Hinton",
+      "where": "University of Toronto, Canada",
+      "country": "Canada",
+      "text": "A deep convolutional network trained on two gaming graphics cards won the ImageNet contest with a top-5 error of about 15.3%, far ahead of about 26.2% for the next team. It used augmentation and dropout to avoid memorising.",
+      "why": "This result convinced much of the field to switch from hand-made features to learned ones.",
+      "box": "train",
+      "sources": [
+        33,
+        34,
+        35
+      ]
+    },
+    {
+      "year": 2014,
+      "date": "June 2014",
+      "era": "deep",
+      "art": "selfie",
+      "key": false,
+      "title": "DeepFace",
+      "who": "Yaniv Taigman and colleagues",
+      "where": "Facebook AI Research, Menlo Park, United States",
+      "country": "United States",
+      "text": "A deep network trained on about 4 million face photos from Facebook users matched pairs of faces with 97.35% accuracy on a standard test, close to the 97.53% people score.",
+      "why": "Face recognition jumped in accuracy, and so did questions about who gets recognised, and with whose photos.",
+      "box": "fails",
+      "sources": [
+        36,
+        37
+      ]
+    },
+    {
+      "year": 2015,
+      "date": "December 2015",
+      "era": "deep",
+      "art": "neuralnet",
+      "key": true,
+      "title": "ResNet: 152 layers",
+      "who": "Kaiming He, Xiangyu Zhang, Shaoqing Ren and Jian Sun",
+      "where": "Microsoft Research Asia, Beijing, China",
+      "country": "China",
+      "text": "Very deep networks used to train badly. ResNet added shortcut connections that let each block learn only a small change, which made networks 152 layers deep trainable. It won ImageNet 2015 with a 3.57% top-5 error.",
+      "why": "Residual connections are now in almost every large network, including language models.",
+      "box": "filters",
+      "sources": [
+        38,
+        39
+      ]
+    },
+    {
+      "year": 2015,
+      "date": "May 2015",
+      "era": "deep",
+      "art": "cell",
+      "key": false,
+      "title": "U-Net draws masks",
+      "who": "Olaf Ronneberger, Philipp Fischer and Thomas Brox",
+      "where": "University of Freiburg, Germany",
+      "country": "Germany",
+      "text": "U-Net shrinks a picture through convolution layers and then grows it back, labelling every pixel. It was built to outline cells in microscope images from only a few labelled examples.",
+      "why": "It became a standard tool for segmentation, especially in medicine.",
+      "box": "detect",
+      "sources": [
+        40,
+        41
+      ]
+    },
+    {
+      "year": 2016,
+      "date": "June 2016",
+      "era": "deep",
+      "art": "car",
+      "key": true,
+      "title": "YOLO: you only look once",
+      "who": "Joseph Redmon, Santosh Divvala, Ross Girshick and Ali Farhadi",
+      "where": "University of Washington and Allen Institute for AI, Seattle, United States",
+      "country": "United States",
+      "text": "Instead of sliding a window, YOLO splits the picture into a grid and predicts all boxes and classes in one pass of one network. It ran at about 45 frames a second.",
+      "why": "Fast single-pass detectors made real-time detection practical in cars, drones, phones and cameras.",
+      "box": "detect",
+      "sources": [
+        42,
+        43
+      ]
+    },
+    {
+      "year": 2018,
+      "date": "February 2018",
+      "era": "deep",
+      "art": "scales",
+      "key": true,
+      "title": "Gender Shades",
+      "who": "Joy Buolamwini and Timnit Gebru",
+      "where": "MIT Media Lab, Cambridge, United States",
+      "country": "United States",
+      "text": "Testing three commercial face-analysis systems on 1,270 faces of parliament members from six countries, they found gender errors of at most 0.8% for lighter-skinned men but up to 34.7% for darker-skinned women.",
+      "why": "It showed that unbalanced data can make a system fail most for the people least represented, and pushed companies to improve.",
+      "box": "fails",
+      "sources": [
+        44,
+        45
+      ]
+    },
+    {
+      "year": 2019,
+      "date": "June 2019",
+      "era": "deep",
+      "art": "eye",
+      "key": false,
+      "title": "Eye screening tested in India",
+      "who": "Varun Gulshan and colleagues, with Aravind and Sankara Nethralaya",
+      "where": "Madurai and Chennai, India",
+      "country": "India",
+      "text": "A deep-learning system for diabetic retinopathy was tested on 3,049 patients at two Indian eye hospitals. It spotted cases needing a doctor about as well as, or better than, trained graders and eye specialists.",
+      "why": "Screening aids like this could help reach millions of people with diabetes where eye doctors are scarce.",
+      "box": "uses",
+      "sources": [
+        46
+      ]
+    },
+    {
+      "year": 2019,
+      "date": "December 2019",
+      "era": "deep",
+      "art": "scales",
+      "key": false,
+      "title": "NIST measures bias in face recognition",
+      "who": "Patrick Grother, Mei Ngan and Kayee Hanaoka",
+      "where": "NIST, Gaithersburg, United States",
+      "country": "United States",
+      "text": "The US standards agency tested 189 face recognition algorithms. False matches were often 10 to more than 100 times more common for some demographic groups than others, though the size of the gap depended strongly on the algorithm.",
+      "why": "It gave governments and buyers hard numbers on how accurate and how fair different systems are.",
+      "box": "fails",
+      "sources": [
+        47
+      ]
+    },
+    {
+      "year": 2020,
+      "date": "October 2020",
+      "era": "language",
+      "art": "llm",
+      "key": false,
+      "title": "Vision Transformer",
+      "who": "Alexey Dosovitskiy and colleagues",
+      "where": "Google Research, Berlin, Germany",
+      "country": "Germany",
+      "text": "The paper 'An Image is Worth 16x16 Words' cut pictures into patches and fed them to a transformer, the design behind language models. With enough training data, it matched or beat the best CNNs.",
+      "why": "Vision and language models began to share one design.",
+      "box": "uses",
+      "sources": [
+        48,
+        49
+      ]
+    },
+    {
+      "year": 2021,
+      "date": "January 2021",
+      "era": "language",
+      "art": "llm",
+      "key": true,
+      "title": "CLIP: pictures meet words",
+      "who": "Alec Radford and colleagues",
+      "where": "OpenAI, San Francisco, United States",
+      "country": "United States",
+      "text": "CLIP learned from about 400 million pictures with captions from the web, matching each picture with its text. It could then recognise things it was never given labels for, just from a written description.",
+      "why": "It led to vision-language models that caption photos and answer questions about them.",
+      "box": "uses",
+      "sources": [
+        50,
+        51
+      ]
+    },
+    {
+      "year": 2022,
+      "date": "1 December 2022",
+      "era": "language",
+      "art": "plane",
+      "key": false,
+      "title": "DigiYatra face boarding",
+      "who": "Ministry of Civil Aviation and the Digi Yatra Foundation",
+      "where": "Delhi, Bengaluru and Varanasi airports, India",
+      "country": "India",
+      "text": "India launched DigiYatra, which lets passengers who sign up walk through airport gates by face instead of showing papers. The government says it is voluntary and privacy-focused; digital-rights groups have raised concerns about consent, data sharing and transparency.",
+      "why": "It shows both the convenience of face recognition and why clear rules on consent and data matter.",
+      "box": "fails",
+      "sources": [
+        52,
+        53,
+        54
+      ]
+    },
+    {
+      "year": 2023,
+      "date": "April 2023",
+      "era": "language",
+      "art": "cell",
+      "key": false,
+      "title": "Segment Anything",
+      "who": "Alexander Kirillov and colleagues",
+      "where": "Meta AI, Menlo Park, United States",
+      "country": "United States",
+      "text": "Meta released a model that draws a mask around almost any object you point at, trained on 11 million images with more than 1.1 billion masks.",
+      "why": "Segmentation went from a narrow tool to something anyone could use on any picture.",
+      "box": "detect",
+      "sources": [
+        55,
+        56
+      ]
+    },
+    {
+      "year": 2024,
+      "date": "2024",
+      "era": "language",
+      "art": "scales",
+      "key": false,
+      "title": "The EU's AI Act",
+      "who": "European Union",
+      "where": "Brussels, Belgium",
+      "country": "Belgium",
+      "text": "The EU's AI Act became law in 2024. Among other rules, it bans real-time face recognition by police in public places except in narrow cases, such as searching for a victim of kidnapping.",
+      "why": "It is one of the first big laws to draw lines around what computer vision may be used for.",
+      "box": "fails",
+      "sources": [
+        57,
+        58
+      ]
+    }
+  ],
+  "firsts": [
+    {
+      "label": "First digital photo scanned into a computer",
+      "value": "1957",
+      "who": "Russell Kirsch and team, National Bureau of Standards, United States"
+    },
+    {
+      "label": "Layered, convolution-style vision network",
+      "value": "1979 to 1980",
+      "who": "Kunihiko Fukushima's Neocognitron, Japan"
+    },
+    {
+      "label": "Convolutional network trained with backpropagation",
+      "value": "1989",
+      "who": "Yann LeCun and colleagues, AT&T Bell Labs, United States"
+    },
+    {
+      "label": "Real-time face detection",
+      "value": "2001",
+      "who": "Paul Viola and Michael Jones, United States"
+    },
+    {
+      "label": "Deep network wins ImageNet",
+      "value": "2012",
+      "who": "AlexNet, University of Toronto, Canada"
+    },
+    {
+      "label": "Network over 100 layers wins ImageNet",
+      "value": "2015",
+      "who": "ResNet, Microsoft Research Asia, China"
+    }
+  ],
+  "people": [
+    {
+      "name": "Russell Kirsch",
+      "life": "1929 – 2020",
+      "role": "Computer scientist",
+      "from": "United States",
+      "note": "Led the team that scanned the first digital photo, and is often credited with the idea of the pixel."
+    },
+    {
+      "name": "David Hubel",
+      "life": "1926 – 2013",
+      "role": "Neuroscientist",
+      "from": "Canada and United States",
+      "note": "With Torsten Wiesel, found the edge-detecting cells of the visual cortex."
+    },
+    {
+      "name": "Torsten Wiesel",
+      "life": "born 1924",
+      "role": "Neuroscientist",
+      "from": "Sweden",
+      "note": "Shared the 1981 Nobel Prize with Hubel for decoding how the brain's visual system works."
+    },
+    {
+      "name": "Kunihiko Fukushima",
+      "life": "born 1936",
+      "role": "Computer scientist",
+      "from": "Japan",
+      "note": "Invented the Neocognitron, the forerunner of convolutional networks."
+    },
+    {
+      "name": "Yann LeCun",
+      "life": "born 1960",
+      "role": "Computer scientist",
+      "from": "France",
+      "note": "Made convolutional networks learn with backpropagation and read real handwriting."
+    },
+    {
+      "name": "Fei-Fei Li",
+      "life": "born 1976",
+      "role": "Computer scientist",
+      "from": "China and United States",
+      "note": "Led ImageNet, the dataset and contest that powered the deep learning boom in vision."
+    },
+    {
+      "name": "Kaiming He",
+      "life": "born c. 1984",
+      "role": "Computer scientist",
+      "from": "China",
+      "note": "Lead author of ResNet, whose shortcut connections made very deep networks trainable."
+    },
+    {
+      "name": "Joy Buolamwini",
+      "life": "born 1990",
+      "role": "Computer scientist and activist",
+      "from": "Canada, Ghana and United States",
+      "note": "Showed with Gender Shades how face analysis failed darker-skinned women most, and founded the Algorithmic Justice League."
+    },
+    {
+      "name": "Timnit Gebru",
+      "life": "born c. 1983",
+      "role": "Computer scientist",
+      "from": "Ethiopia and United States",
+      "note": "Co-author of Gender Shades and a leading voice on bias and accountability in AI."
+    }
+  ],
+  "series": [
+    {
+      "id": "imagenet",
+      "title": "Winning error in the ImageNet contest",
+      "unit": "% top-5 error",
+      "log": false,
+      "after": "deep",
+      "caption": "How often the winning program's five best guesses all missed the right label. Deep networks arrived in 2012, and the error fell fast.",
+      "points": [
+        {
+          "year": 2010,
+          "value": 28.2,
+          "label": "NEC and UIUC, hand-made features: 28.2%"
+        },
+        {
+          "year": 2011,
+          "value": 25.8,
+          "label": "XRCE, hand-made features: 25.8%"
+        },
+        {
+          "year": 2012,
+          "value": 15.3,
+          "label": "AlexNet: 15.3%"
+        },
+        {
+          "year": 2013,
+          "value": 11.2,
+          "label": "Clarifai: 11.2%"
+        },
+        {
+          "year": 2014,
+          "value": 6.7,
+          "label": "GoogLeNet: 6.7%"
+        },
+        {
+          "year": 2015,
+          "value": 3.57,
+          "label": "ResNet: 3.57%"
+        },
+        {
+          "year": 2016,
+          "value": 2.99,
+          "label": "Trimps-Soushen: about 2.99%"
+        },
+        {
+          "year": 2017,
+          "value": 2.25,
+          "label": "SENet: about 2.25%"
+        }
+      ]
+    },
+    {
+      "id": "data",
+      "title": "How many pictures famous vision datasets hold",
+      "unit": "pictures",
+      "log": true,
+      "after": "language",
+      "caption": "Datasets grew from tens of thousands of labelled digits to billions of pictures with captions scraped from the web.",
+      "points": [
+        {
+          "year": 1998,
+          "value": 70000,
+          "label": "MNIST handwritten digits: 70,000"
+        },
+        {
+          "year": 2004,
+          "value": 9146,
+          "label": "Caltech-101: 9,146 pictures in 101 categories"
+        },
+        {
+          "year": 2009,
+          "value": 3200000,
+          "label": "ImageNet at launch: about 3.2 million (later over 14 million)"
+        },
+        {
+          "year": 2014,
+          "value": 328000,
+          "label": "COCO, with boxes and masks: about 328,000"
+        },
+        {
+          "year": 2021,
+          "value": 400000000,
+          "label": "CLIP: about 400 million picture–caption pairs (reported)"
+        },
+        {
+          "year": 2022,
+          "value": 5850000000,
+          "label": "LAION-5B: 5.85 billion picture–caption pairs"
+        },
+        {
+          "year": 2023,
+          "value": 11000000,
+          "label": "Segment Anything: 11 million pictures, 1.1 billion masks"
+        }
+      ]
+    }
+  ],
+  "facts": [
+    "The first digital photo, in 1957, was 176 × 176 pixels, about 31,000. A cheap phone camera today has more than 10 million.",
+    "In 1966 MIT planned to build a large part of a vision system as a summer project for students. It took the whole field more than 40 years.",
+    "Scanning a UPI QR code needs no neural network: its three corner squares always show stripes in the ratio 1:1:3:1:1, from any angle.",
+    "A change of just a few steps out of 255 to every pixel, chosen with the network's own maths, can make it name the wrong object.",
+    "ImageNet's millions of labels were added by thousands of online workers, who checked the pictures one by one."
+  ],
+  "sources": [
+    {
+      "title": "First Digital Image",
+      "publisher": "NIST",
+      "url": "https://www.nist.gov/mathematics-statistics/first-digital-image"
+    },
+    {
+      "title": "Russell Kirsch",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Russell_Kirsch"
+    },
+    {
+      "title": "Receptive fields of single neurones in the cat's striate cortex (Hubel and Wiesel, 1959)",
+      "publisher": "The Journal of Physiology",
+      "url": "https://physoc.onlinelibrary.wiley.com/doi/10.1113/jphysiol.1959.sp006308"
+    },
+    {
+      "title": "David H. Hubel",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/David_H._Hubel"
+    },
+    {
+      "title": "Lawrence Roberts publishes \"Machine Perception of Three-Dimensional Solids\"",
+      "publisher": "History of Information",
+      "url": "https://www.historyofinformation.com/detail.php?entryid=2528"
+    },
+    {
+      "title": "Larry Roberts (computer scientist)",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Larry_Roberts_(computer_scientist)"
+    },
+    {
+      "title": "The Summer Vision Project (AI Memo 100, 1966)",
+      "publisher": "MIT CSAIL",
+      "url": "https://people.csail.mit.edu/brooks/idocs/AIM-100.pdf"
+    },
+    {
+      "title": "History of computer vision",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/History_of_computer_vision"
+    },
+    {
+      "title": "The Nobel Prize in Physics 2009",
+      "publisher": "NobelPrize.org",
+      "url": "https://www.nobelprize.org/prizes/physics/2009/summary/"
+    },
+    {
+      "title": "Charge-coupled device",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Charge-coupled_device"
+    },
+    {
+      "title": "Neocognitron (Fukushima, 1980)",
+      "publisher": "Biological Cybernetics, Springer",
+      "url": "https://link.springer.com/article/10.1007/BF00344251"
+    },
+    {
+      "title": "Neocognitron",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Neocognitron"
+    },
+    {
+      "title": "The Nobel Prize in Physiology or Medicine 1981",
+      "publisher": "NobelPrize.org",
+      "url": "https://www.nobelprize.org/prizes/medicine/1981/summary/"
+    },
+    {
+      "title": "Torsten Wiesel",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Torsten_Wiesel"
+    },
+    {
+      "title": "David Marr (neuroscientist)",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/David_Marr_(neuroscientist)"
+    },
+    {
+      "title": "Vision (Marr)",
+      "publisher": "MIT Press",
+      "url": "https://mitpress.mit.edu/9780262514620/vision/"
+    },
+    {
+      "title": "Canny edge detector",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Canny_edge_detector"
+    },
+    {
+      "title": "A Computational Approach to Edge Detection (Canny, 1986)",
+      "publisher": "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+      "url": "https://ieeexplore.ieee.org/document/4767851"
+    },
+    {
+      "title": "Harris corner detector",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Harris_corner_detector"
+    },
+    {
+      "title": "A Combined Corner and Edge Detector (Harris and Stephens, 1988)",
+      "publisher": "Alvey Vision Conference, BMVA",
+      "url": "https://bmva-archive.org.uk/bmvc/1988/avc-88-023.pdf"
+    },
+    {
+      "title": "LeNet",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/LeNet"
+    },
+    {
+      "title": "Yann LeCun",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Yann_LeCun"
+    },
+    {
+      "title": "QR code",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/QR_code"
+    },
+    {
+      "title": "History of QR Code",
+      "publisher": "Denso Wave",
+      "url": "https://www.qrcode.com/en/history/"
+    },
+    {
+      "title": "Gradient-based learning applied to document recognition (LeCun et al., 1998)",
+      "publisher": "Proceedings of the IEEE",
+      "url": "https://ieeexplore.ieee.org/document/726791"
+    },
+    {
+      "title": "Scale-invariant feature transform",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Scale-invariant_feature_transform"
+    },
+    {
+      "title": "Object recognition from local scale-invariant features (Lowe, 1999)",
+      "publisher": "IEEE ICCV",
+      "url": "https://ieeexplore.ieee.org/document/790410"
+    },
+    {
+      "title": "Viola–Jones object detection framework",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Viola–Jones_object_detection_framework"
+    },
+    {
+      "title": "Rapid object detection using a boosted cascade of simple features (Viola and Jones, 2001)",
+      "publisher": "IEEE CVPR",
+      "url": "https://ieeexplore.ieee.org/document/990517"
+    },
+    {
+      "title": "Histogram of oriented gradients",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Histogram_of_oriented_gradients"
+    },
+    {
+      "title": "Histograms of oriented gradients for human detection (Dalal and Triggs, 2005)",
+      "publisher": "IEEE CVPR",
+      "url": "https://ieeexplore.ieee.org/document/1467360"
+    },
+    {
+      "title": "ImageNet: A large-scale hierarchical image database (Deng et al., 2009)",
+      "publisher": "IEEE CVPR",
+      "url": "https://ieeexplore.ieee.org/document/5206848"
+    },
+    {
+      "title": "ImageNet",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/ImageNet"
+    },
+    {
+      "title": "ImageNet Classification with Deep Convolutional Neural Networks (Krizhevsky et al., 2012)",
+      "publisher": "NeurIPS",
+      "url": "https://papers.nips.cc/paper/2012/hash/c399862d3b9d6b76c8436e924a68c45b-Abstract.html"
+    },
+    {
+      "title": "AlexNet",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/AlexNet"
+    },
+    {
+      "title": "ILSVRC 2012 results",
+      "publisher": "ImageNet",
+      "url": "https://image-net.org/challenges/LSVRC/2012/results"
+    },
+    {
+      "title": "DeepFace: Closing the Gap to Human-Level Performance in Face Verification (CVPR 2014)",
+      "publisher": "CVF Open Access",
+      "url": "https://openaccess.thecvf.com/content_cvpr_2014/html/Taigman_DeepFace_Closing_the_2014_CVPR_paper.html"
+    },
+    {
+      "title": "DeepFace",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/DeepFace"
+    },
+    {
+      "title": "Deep Residual Learning for Image Recognition (He et al., 2015)",
+      "publisher": "arXiv",
+      "url": "https://arxiv.org/abs/1512.03385"
+    },
+    {
+      "title": "Residual neural network",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Residual_neural_network"
+    },
+    {
+      "title": "U-Net: Convolutional Networks for Biomedical Image Segmentation",
+      "publisher": "arXiv",
+      "url": "https://arxiv.org/abs/1505.04597"
+    },
+    {
+      "title": "U-Net",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/U-Net"
+    },
+    {
+      "title": "You Only Look Once: Unified, Real-Time Object Detection",
+      "publisher": "arXiv",
+      "url": "https://arxiv.org/abs/1506.02640"
+    },
+    {
+      "title": "You Only Look Once",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/You_Only_Look_Once"
+    },
+    {
+      "title": "Gender Shades: Intersectional Accuracy Disparities in Commercial Gender Classification",
+      "publisher": "Proceedings of Machine Learning Research 81",
+      "url": "https://proceedings.mlr.press/v81/buolamwini18a.html"
+    },
+    {
+      "title": "Joy Buolamwini",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Joy_Buolamwini"
+    },
+    {
+      "title": "Performance of a Deep-Learning Algorithm vs Manual Grading for Detecting Diabetic Retinopathy in India",
+      "publisher": "JAMA Ophthalmology (PMC)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6567842/"
+    },
+    {
+      "title": "Face Recognition Vendor Test Part 3: Demographic Effects (NISTIR 8280)",
+      "publisher": "NIST",
+      "url": "https://nvlpubs.nist.gov/nistpubs/ir/2019/NIST.IR.8280.pdf"
+    },
+    {
+      "title": "An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale",
+      "publisher": "arXiv",
+      "url": "https://arxiv.org/abs/2010.11929"
+    },
+    {
+      "title": "Vision transformer",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Vision_transformer"
+    },
+    {
+      "title": "Learning Transferable Visual Models From Natural Language Supervision",
+      "publisher": "arXiv",
+      "url": "https://arxiv.org/abs/2103.00020"
+    },
+    {
+      "title": "Contrastive Language-Image Pre-training",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Contrastive_Language-Image_Pre-training"
+    },
+    {
+      "title": "DigiYatra app launch: facial recognition installed at three airports",
+      "publisher": "Business Today",
+      "url": "https://www.businesstoday.in/industry/aviation/story/digiyatra-app-launch-facial-recognition-installed-at-these-three-airports-today-354920-2022-12-01"
+    },
+    {
+      "title": "Digi Yatra",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Digi_Yatra"
+    },
+    {
+      "title": "DigiYatra",
+      "publisher": "Internet Freedom Foundation",
+      "url": "https://internetfreedom.in/tag/digiyatra/"
+    },
+    {
+      "title": "Segment Anything",
+      "publisher": "Meta AI",
+      "url": "https://ai.meta.com/research/publications/segment-anything/"
+    },
+    {
+      "title": "SA-1B Dataset",
+      "publisher": "Meta AI",
+      "url": "https://ai.meta.com/datasets/segment-anything/"
+    },
+    {
+      "title": "Regulation (EU) 2024/1689 (Artificial Intelligence Act)",
+      "publisher": "EUR-Lex",
+      "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"
+    },
+    {
+      "title": "Artificial Intelligence Act",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Artificial_Intelligence_Act"
+    },
+    {
+      "title": "ImageNet Large Scale Visual Recognition Challenge (Russakovsky et al., 2015)",
+      "publisher": "International Journal of Computer Vision (arXiv)",
+      "url": "https://arxiv.org/abs/1409.0575"
+    },
+    {
+      "title": "Microsoft COCO: Common Objects in Context (Lin et al., 2014)",
+      "publisher": "arXiv",
+      "url": "https://arxiv.org/abs/1405.0312"
+    },
+    {
+      "title": "LAION-5B: An open large-scale dataset for training next generation image-text models",
+      "publisher": "arXiv",
+      "url": "https://arxiv.org/abs/2210.08402"
+    },
+    {
+      "title": "MNIST database",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/MNIST_database"
+    },
+    {
+      "title": "Caltech 101",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Caltech_101"
+    }
+  ]
+}

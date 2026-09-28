@@ -1,0 +1,133 @@
+{
+  "slug": "visionclear",
+  "box": 78,
+  "date": "2026-09-30",
+  "title": "VisionClear",
+  "question": "How does image recognition work?",
+  "hook": "To a computer, a mango is 2,304 numbers. Here a tiny camera renders one, hand-made filters find its edges, and a real neural network learns to tell mangoes from bananas, chillies and coins right in your browser. Then it finds them in a scene, draws boxes and masks, and gets fooled by invisible noise.",
+  "thumbText": "HOW COMPUTERS SEE",
+  "field": "ai",
+  "minutes": 20,
+  "tags": [
+    "image recognition",
+    "computer vision",
+    "pixels",
+    "RGB",
+    "convolution",
+    "filters",
+    "edge detection",
+    "corner detection",
+    "feature maps",
+    "max pooling",
+    "CNN",
+    "convolutional neural network",
+    "training",
+    "data augmentation",
+    "test set",
+    "confusion matrix",
+    "object detection",
+    "bounding box",
+    "IoU",
+    "non-max suppression",
+    "segmentation",
+    "adversarial examples",
+    "shortcut learning",
+    "saliency map",
+    "dataset bias",
+    "Gender Shades",
+    "face recognition",
+    "privacy",
+    "diabetic retinopathy",
+    "UPI QR code",
+    "vision transformer",
+    "vision-language models",
+    "ImageNet",
+    "AlexNet",
+    "deep learning",
+    "AI",
+    "three.js"
+  ],
+  "explainer": [
+    {
+      "title": "A picture is only numbers",
+      "text": "A camera sensor turns light into a grid of pixels, each with a red, green and blue value from 0 to 255. A 32 × 24 picture is 2,304 numbers. Turn the object, move the camera or change the light and most of those numbers change, though it is the same mango. Recognising means finding what stays the same."
+    },
+    {
+      "title": "Filters find edges, layers find parts",
+      "text": "A 3 × 3 grid of weights slid over the picture, a convolution, lights up where brightness jumps: edges. Edges two ways at once are corners; busy patterns are texture. Max pooling keeps the biggest number in each 2 × 2 block. A CNN stacks learned filters, so early layers find edges and colours and later layers combine them into parts."
+    },
+    {
+      "title": "Learning from labelled pictures",
+      "text": "A small CNN with 21,081 weights trains in your browser on 1,200 made-up pictures of a mango, banana, chilli, coin or nothing, and is tested on 300 wild ones it never saw. Data augmentation, randomly turning, flipping and re-lighting each picture, stops it from memorising and lifts test accuracy. A confusion matrix shows what it mixes up."
+    },
+    {
+      "title": "Where, not just what",
+      "text": "Slide the recogniser over 897 windows of a scene and keep the confident ones. Non-max suppression keeps the best box and deletes duplicates that overlap it, measured by IoU, overlap divided by union. A second small network labels every pixel, turning boxes into masks. Detectors like YOLO do it in one pass, fast enough for video."
+    },
+    {
+      "title": "It fails in strange ways",
+      "text": "A tiny change to every pixel, worked out from the network's own gradient, can flip its answer. A network trained with every fruit on its own background learns the background instead. Dim light outside its training range lowers accuracy. The 2018 Gender Shades study found face-analysis errors of up to 34.7% for darker-skinned women against at most 0.8% for lighter-skinned men."
+    },
+    {
+      "title": "Everywhere, with limits",
+      "text": "Image recognition searches photos, helps screen for diabetic eye disease in India, suggests crop diseases, reads number plates and checks factory parts. Reading a UPI QR code mostly uses classic geometry with no learning. Vision transformers and vision-language models are next, but they can be confidently wrong, and face recognition raises real privacy questions."
+    }
+  ],
+  "concepts": [
+    {
+      "term": "Pixel",
+      "def": "One tiny square of a picture, stored as red, green and blue numbers."
+    },
+    {
+      "term": "Convolution",
+      "def": "Sliding a small grid of weights over a picture and adding up at every spot."
+    },
+    {
+      "term": "Feature map",
+      "def": "The picture of a filter's answers: bright where it found its pattern."
+    },
+    {
+      "term": "Max pooling",
+      "def": "Keeping the biggest number in each small block, which shrinks a map and tolerates small shifts."
+    },
+    {
+      "term": "CNN",
+      "def": "A convolutional neural network: layers of learned filters and pooling, then an answer."
+    },
+    {
+      "term": "Data augmentation",
+      "def": "Randomly turning, flipping, re-lighting and adding noise to training pictures so a network can't memorise them."
+    },
+    {
+      "term": "IoU",
+      "def": "Intersection over union: how much two boxes overlap, from 0 to 1."
+    },
+    {
+      "term": "Non-max suppression",
+      "def": "Keeping the most confident box and deleting the boxes that overlap it too much."
+    },
+    {
+      "term": "Adversarial example",
+      "def": "A picture changed on purpose, often invisibly, so that a model gets it wrong."
+    }
+  ],
+  "links": {},
+  "storage": [
+    {
+      "key": "visionclear.v1",
+      "what": "Which chapters you have opened, your best quiz scores, and sound on or off."
+    }
+  ],
+  "credits": [
+    {
+      "name": "three.js",
+      "license": "MIT",
+      "url": "https://threejs.org"
+    },
+    {
+      "name": "Geist, Instrument Serif",
+      "license": "SIL OFL 1.1",
+      "url": "https://openfontlicense.org"
+    }
+  ]
+}
